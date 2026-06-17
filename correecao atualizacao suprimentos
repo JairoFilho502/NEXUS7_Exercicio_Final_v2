@@ -1,0 +1,19 @@
+void inserirFundoDeque(DequeSuprimentos* D, const char* item, int prio) {
+    NoDeque* novo = (NoDeque*) malloc(sizeof(NoDeque));
+    if (!novo) return;
+    strncpy(novo->item, item, 79);
+    novo->item[79] = '\0'; // garantir terminação
+    novo->prioridade = prio;
+    novo->prox = NULL;
+    novo->ant  = D->cauda;
+
+    if (D->cauda) {
+        D->cauda->prox = novo;
+    } else {
+        // se estava vazio, frente também aponta para o novo
+        D->frente = novo;
+    }
+
+    D->cauda = novo;   // atualização
+    D->tamanho++;
+}
