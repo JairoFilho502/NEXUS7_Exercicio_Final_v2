@@ -1,0 +1,15 @@
+char* desempilharMissao(PilhaMissoes* P) {
+    if (!P->topo) { printf("Historico vazio.\n"); return NULL; }
+    NoPilha* temp = P->topo;
+    P->topo       = temp->prox;
+
+    // aloca espaço para copiar a descrição
+    char* resultado = (char*) malloc(strlen(temp->descricao) + 1);
+    if (resultado) strcpy(resultado, temp->descricao);
+
+    free(temp);   // agora pode liberar o nó
+    P->tamanho--;
+    return resultado;  // retorna uma cópia segura
+}
+
+
