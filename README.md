@@ -123,3 +123,11 @@ sala
 Um único arquivo. O quiz em sala verifica a compreensão. Não há relatório separado para escrever 
 nem para corrigir. 
 Bom trabalho. 
+
+
+
+
+update 1.0
+O que foi feito até o momento:
+
+1)
