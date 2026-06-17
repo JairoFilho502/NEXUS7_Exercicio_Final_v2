@@ -1,0 +1,18 @@
+void imprimirManifesto(ListaTripulacao* L) {
+    NoLista* atual = L->cabeca;
+    printf("\n=== MANIFESTO DA TRIPULACAO ===\n");
+    if (!atual) { 
+        printf("(vazio)\n"); 
+        return; 
+    }
+    while (atual != NULL) {
+        printf("ID %02d | %-20s | %-12s | O2: %5.1f%%\n",
+               atual->dados.id,
+               atual->dados.nome,
+               atual->dados.especialidade,
+               atual->dados.nivel_oxigenio);
+
+        // avanço para o próximo nó da lista
+        atual = atual->prox;
+    }
+}
