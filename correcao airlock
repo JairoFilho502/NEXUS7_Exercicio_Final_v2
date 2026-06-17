@@ -1,0 +1,7 @@
+if (F->tamanho >= MAX_AIRLOCK) {
+    printf("Airlock cheio. Capacidade maxima: %d tripulantes.\n", MAX_AIRLOCK);
+    return 0;
+}
+
+
+// correção da max capacidade airlock
